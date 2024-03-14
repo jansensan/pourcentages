@@ -16,45 +16,101 @@
       <div class="article-content">
         <h1>Pourcentages</h1>
 
-        <form class="form">
+        <div class="results" id="results">
+          <div class="chosen-values">
+            <span
+              id="percentageVal"
+              class="chosen-value"
+            >100%</span>
+            ×
+            <span
+              id="weightVal"
+              class="chosen-value"
+            >150</span>
+          </div>
+
+          <div class="result-values">
+            <div>
+              <div class="label">Poids par côté</div>
+              <div
+                id="weightPerSideVal"
+                class="result-value"
+              >150</div>
+            </div>
+            <div>
+              <div class="label">Poids total</div>
+              <div
+                id="totalWeightVal"
+                class="result-value"
+              >150</div>
+            </div>
+          </div>
+
+          <button
+            id="reinitButton"
+            class="tertiary-btn reinit-btn"
+            type="button"
+          >Réinitialiser</button>
+        </div>
+
+        <form class="form" id="form">
           <div class="form-row">
-            <label for="personalRecord">Record personnel (PR)</label>
+            <label
+              class="label"
+              for="personalRecord"
+            >Record personnel (PR)</label>
             <input
+              id="personalRecord"
               type="number"
               name="personalRecord"
-              id="personalRecord"
               pattern="\d*"
+              min="0"
+              required
             />
           </div>
 
           <div class="form-row">
-            <label for="barWeight">Poids de la barre</label>
+            <label
+              class="label"
+              for="barWeight"
+            >Poids de la barre</label>
             <input
+              id="barWeight"
               type="number"
               name="barWeight"
-              id="barWeight"
               pattern="\d*"
+              min="0"
+              required
+              value="45"
             />
           </div>
 
           <div class="form-row">
-            <label for="percentage">Pourcentage</label>
+            <label
+              class="label"
+              for="percentage"
+            >Pourcentage</label>
             <input
+              id="percentage"
               type="number"
               name="percentage"
-              id="percentage"
               pattern="\d*"
+              min="0"
+              required
+              value="100"
             />
           </div>
 
           <div class="form-row">
             <button
-              class="submit-btn"
+              id="submitButton"
+              class="primary-btn submit-btn"
               type="submit"
             >Soumettre</button>
           </div>
         </form>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
