@@ -63,7 +63,6 @@ function onFormSubmit(event) {
 function onReinit() {
   results.classList.remove('visible');
 
-  personalRecordInput.value = '';
   barWeightInput.value = 45;
   percentageInput.value = 100;
 }
